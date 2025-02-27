@@ -1,1 +1,7 @@
-<p>parent works!</p>
+<div>
+    <h2>Számológép</h2>
+    <input type="number" [(ngModel)]="a" placeholder="Első szám">               <!-- Első input -->
+    <input type="number" [(ngModel)]="b" placeholder="Második szám">            <!-- Második input -->
+    <app-child [numA]="a" [numB]="b" (result)="setResult($event)"></app-child>  <!-- Child komponens -->
+    <p>Eredmény: {{ result }}</p>                                               <!-- Eredmény megjelenítése -->
+  </div>
